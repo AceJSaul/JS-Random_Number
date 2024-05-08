@@ -1,0 +1,78 @@
+body {
+  font-family: Verdada;
+}
+
+.container {
+  display: grid;
+
+  grid-template-areas: "titulo titulo titulo" "subtitulo subtitulo subtitulo" "label label label";
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  grid-area: titulo;
+}
+h3 {
+  text-align: center;
+  font-weight: 300;
+  grid-area: subtitulo;
+}
+
+#num {
+  grid-area: label;
+  text-align: center;
+  font-size: 8em;
+}
+
+#submit {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: hsl(10, 80%, 60%);
+  padding: 10px;
+}
+
+#submit:hover {
+  background-color: hsl(10, 80%, 50%);
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 2.8em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+
+  #num {
+    font-size: 10em;
+  }
+
+  #submit {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 5em;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    margin-top: 5px;
+    font-size: 3em;
+  }
+
+  #num {
+    font-size: 12em;
+  }
+
+  #submit {
+    font-size: 4em;
+  }
+}
